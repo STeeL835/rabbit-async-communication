@@ -1,7 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Rabbit.Producer.App\Test.Rabbit.Producer.App.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="**/*MappingProfile.cs">
+      <DependentUpon>$([System.Text.RegularExpressions.Regex]::Replace('%(Filename)', 'MappingProfile', '.cs'))</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts;
+﻿namespace Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts.CreateUser;
 
 public sealed class CreateUserDto
 {
