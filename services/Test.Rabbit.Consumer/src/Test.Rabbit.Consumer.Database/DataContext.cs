@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Test.Rabbit.Consumer.Database.Models;
 using Test.Rabbit.Consumer.Database.Models.Organizations;
 using Test.Rabbit.Consumer.Database.Models.Users;
 

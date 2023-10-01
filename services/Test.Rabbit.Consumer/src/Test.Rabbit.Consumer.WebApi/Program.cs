@@ -1,9 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using Test.Rabbit.Consumer.Database;
+using Test.Rabbit.Consumer.WebApi.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-ConfigureServices(builder.Services);
+ConfigureServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
@@ -12,14 +11,13 @@ ConfigureApplication(app);
 app.Run();
 
 
-void ConfigureServices(IServiceCollection services)
+void ConfigureServices(IServiceCollection services, IConfiguration configuration)
 {
-    builder.Services.AddControllers();
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
-    
-    builder.Services.AddDbContext<DataContext>(options =>
-        options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+    services.AddControllers();
+    services.AddEndpointsApiExplorer();
+    services.AddSwaggerGen();
+
+    services.AddAppDatabase(configuration);
 }
 
 void ConfigureApplication(WebApplication webApplication)
