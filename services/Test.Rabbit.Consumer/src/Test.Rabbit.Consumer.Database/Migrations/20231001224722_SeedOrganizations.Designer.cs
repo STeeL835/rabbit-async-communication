@@ -12,7 +12,7 @@ using Test.Rabbit.Consumer.Database;
 namespace Test.Rabbit.Consumer.Database.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231001194539_SeedOrganizations")]
+    [Migration("20231001224722_SeedOrganizations")]
     partial class SeedOrganizations
     {
         /// <inheritdoc />
@@ -42,53 +42,48 @@ namespace Test.Rabbit.Consumer.Database.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fc75b1a2-24f9-45dc-b06f-a34eb1b1e7ef"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad1"),
                             Name = "Organization 1"
                         },
                         new
                         {
-                            Id = new Guid("e47c38ee-8544-40b4-8e68-83f8ddc796b9"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad2"),
                             Name = "Organization 2"
                         },
                         new
                         {
-                            Id = new Guid("6d56423c-b40a-4226-8273-06d9f28bac78"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad3"),
                             Name = "Organization 3"
                         },
                         new
                         {
-                            Id = new Guid("ea831b56-46bf-45c5-94dd-ef7acc8d9e28"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad4"),
                             Name = "Organization 4"
                         },
                         new
                         {
-                            Id = new Guid("737731dc-b1fc-4196-9d9f-2f30566b7268"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad5"),
                             Name = "Organization 5"
                         },
                         new
                         {
-                            Id = new Guid("62b6e811-e44b-4332-8356-12250262ca5d"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad6"),
                             Name = "Organization 6"
                         },
                         new
                         {
-                            Id = new Guid("3e233ece-de20-49a6-83c4-a6378907e526"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad7"),
                             Name = "Organization 7"
                         },
                         new
                         {
-                            Id = new Guid("d82e1801-4e0a-47c0-9677-489aac621217"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad8"),
                             Name = "Organization 8"
                         },
                         new
                         {
-                            Id = new Guid("09dfb161-d57c-42e6-89fc-f231dabd2c5f"),
+                            Id = new Guid("750f2041-6c70-40fc-8c21-f5dd889a6ad9"),
                             Name = "Organization 9"
-                        },
-                        new
-                        {
-                            Id = new Guid("47da97ac-b236-421b-9dac-e140dc90643a"),
-                            Name = "Organization 10"
                         });
                 });
 
