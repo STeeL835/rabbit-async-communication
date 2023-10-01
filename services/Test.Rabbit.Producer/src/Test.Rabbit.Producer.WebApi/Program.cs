@@ -1,6 +1,8 @@
 using System.Reflection;
 using FluentValidation;
 using Test.Rabbit.Producer.App;
+using Test.Rabbit.Producer.Publishers;
+using Test.Rabbit.Producer.WebApi.Configuration;
 using Test.Rabbit.Producer.WebApi.Features.Mediatr.Behaviors;
 using Test.Rabbit.Producer.WebApi.Features.Validation;
 
@@ -21,13 +23,12 @@ void ConfigureServices(IServiceCollection services)
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
     
-    services.AddAutoMapper(Assembly.GetCallingAssembly());
-    services.AddMediatR(cfg =>
-    {
-        cfg.RegisterServicesFromAssembly(AppAssembly.Instance);
-        cfg.AddOpenBehavior(typeof(ValidatorBehavior<,>));
-    });
-    services.AddValidatorsFromAssembly(AppAssembly.Instance);
+    services.AddAppAutomapper();
+    services.AddAppMediatr();
+    services.AddAppValidators();
+    services.AddAppRabbitMq();
+
+    services.AddPublishers();
 }
 
 void ConfigureApplication(WebApplication application)
