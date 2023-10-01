@@ -1,4 +1,4 @@
-﻿using Test.Rabbit.Producer.App.Users.CreateUser.Parameters;
+﻿using Test.Rabbit.Producer.App.Users.CreateUser.Contracts;
 
 namespace Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts.CreateUser;
 

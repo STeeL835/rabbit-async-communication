@@ -1,7 +1,7 @@
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Test.Rabbit.Producer.App.Users.CreateUser.Parameters;
+using Test.Rabbit.Producer.App.Users.CreateUser.Contracts;
 using Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts.CreateUser;
 
 namespace Test.Rabbit.Producer.WebApi.Controllers.Users; 

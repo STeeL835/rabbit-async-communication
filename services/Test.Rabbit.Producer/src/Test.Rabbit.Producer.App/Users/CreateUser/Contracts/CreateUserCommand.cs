@@ -1,4 +1,4 @@
-﻿namespace Test.Rabbit.Producer.App.Users.CreateUser.Parameters;
+﻿namespace Test.Rabbit.Producer.App.Users.CreateUser.Contracts;
 
 public sealed record CreateUserCommand(
     string FirstName,
