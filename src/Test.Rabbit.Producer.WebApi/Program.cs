@@ -1,5 +1,7 @@
 using System.Reflection;
+using FluentValidation;
 using Test.Rabbit.Producer.App;
+using Test.Rabbit.Producer.WebApi.Features.Mediatr.Behaviors;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,19 +19,25 @@ void ConfigureServices(IServiceCollection services)
     services.AddControllers();
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
+    
     services.AddAutoMapper(Assembly.GetCallingAssembly());
-    services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(AppAssembly.Instance));
+    services.AddMediatR(cfg =>
+    {
+        cfg.RegisterServicesFromAssembly(AppAssembly.Instance);
+        cfg.AddOpenBehavior(typeof(ValidatorBehavior<,>));
+    });
+    services.AddValidatorsFromAssembly(AppAssembly.Instance);
 }
 
-void ConfigureApplication(WebApplication app)
+void ConfigureApplication(WebApplication application)
 {
-    if (app.Environment.IsDevelopment())
+    if (application.Environment.IsDevelopment())
     {
-        app.UseSwagger();
-        app.UseSwaggerUI();
+        application.UseSwagger();
+        application.UseSwaggerUI();
     }
 
-    app.UseHttpsRedirection();
-    app.UseAuthorization();
-    app.MapControllers();
+    application.UseHttpsRedirection();
+    application.UseAuthorization();
+    application.MapControllers();
 }
