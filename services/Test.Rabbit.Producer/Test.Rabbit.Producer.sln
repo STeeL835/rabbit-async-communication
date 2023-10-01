@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{2D55BF
 		Directory.Packages.props = Directory.Packages.props
 		README.md = README.md
 		.gitignore = .gitignore
+		Directory.Build.targets = Directory.Build.targets
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Producer.App", "src\Test.Rabbit.Producer.App\Test.Rabbit.Producer.App.csproj", "{A159D3CE-0DAB-4109-86BB-75940A8F4B2D}"
