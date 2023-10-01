@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95A71924-C97
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Consumer.WebApi", "src\Test.Rabbit.Consumer.WebApi\Test.Rabbit.Consumer.WebApi.csproj", "{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Consumer.Database", "src\Test.Rabbit.Consumer.Database\Test.Rabbit.Consumer.Database.csproj", "{3BDB0BE7-C402-427C-944D-4E31A4392FEA}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4AA9B30C-B8A8-40D3-9C48-B12F86A61EDB}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -28,8 +30,13 @@ Global
 		{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC} = {95A71924-C977-4C1A-85A8-2628842432A7}
+		{3BDB0BE7-C402-427C-944D-4E31A4392FEA} = {95A71924-C977-4C1A-85A8-2628842432A7}
 	EndGlobalSection
 EndGlobal
