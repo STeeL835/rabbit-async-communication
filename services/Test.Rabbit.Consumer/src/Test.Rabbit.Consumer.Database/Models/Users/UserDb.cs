@@ -1,4 +1,6 @@
-﻿namespace Test.Rabbit.Consumer.Database.Models;
+﻿using Test.Rabbit.Consumer.Database.Models.Organizations;
+
+namespace Test.Rabbit.Consumer.Database.Models.Users;
 
 public sealed class UserDb
 {

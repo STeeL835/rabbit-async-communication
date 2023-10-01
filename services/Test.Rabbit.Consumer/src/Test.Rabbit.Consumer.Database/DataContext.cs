@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Test.Rabbit.Consumer.Database.Models;
+using Test.Rabbit.Consumer.Database.Models.Organizations;
+using Test.Rabbit.Consumer.Database.Models.Users;
 
 namespace Test.Rabbit.Consumer.Database;
 
@@ -12,5 +14,6 @@ public sealed class DataContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfigurationsFromAssembly(DatabaseAssembly.Instance);
     }
 }
