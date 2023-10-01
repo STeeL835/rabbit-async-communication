@@ -1,6 +1,6 @@
-﻿namespace Test.Rabbit.Producer.Publishers.CreateUser.Contracts;
+namespace Test.Rabbit.Producer.Publishers.CreateUser.Contracts;
 
-public record CreateUserCommandMessage(
+public sealed record CreateUserExternalCommand(
     string FirstName,
     string LastName,
     string? MiddleName,
