@@ -2,6 +2,7 @@ using System.Reflection;
 using FluentValidation;
 using Test.Rabbit.Producer.App;
 using Test.Rabbit.Producer.WebApi.Features.Mediatr.Behaviors;
+using Test.Rabbit.Producer.WebApi.Features.Validation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,7 @@ app.Run();
 
 void ConfigureServices(IServiceCollection services)
 {
-    services.AddControllers();
+    services.AddControllers(cfg => cfg.Filters.Add<ValidationExceptionsFilter>());
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
     
