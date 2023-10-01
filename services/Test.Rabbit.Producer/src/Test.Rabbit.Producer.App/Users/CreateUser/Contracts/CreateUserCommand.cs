@@ -6,4 +6,4 @@ public sealed record CreateUserCommand(
     string? MiddleName,
     string PhoneNumber,
     string EmailAddress)
-    : MediatR.IRequest<CreateUserResponse>;
+    : MediatR.IRequest;

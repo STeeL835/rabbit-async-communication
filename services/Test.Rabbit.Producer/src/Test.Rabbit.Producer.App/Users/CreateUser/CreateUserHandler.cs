@@ -1,19 +1,26 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AutoMapper;
+using MediatR;
 using Test.Rabbit.Producer.App.Users.CreateUser.Contracts;
+using Test.Rabbit.Producer.Publishers.CreateUser;
+using Test.Rabbit.Producer.Publishers.CreateUser.Contracts;
 
 namespace Test.Rabbit.Producer.App.Users.CreateUser;
 
-public sealed class CreateUserHandler : MediatR.IRequestHandler<CreateUserCommand, CreateUserResponse>
+public sealed class CreateUserHandler : IRequestHandler<CreateUserCommand>
 {
-    private readonly ILogger<CreateUserHandler> _logger;
+    private readonly IMapper _mapper;
+    private readonly CreateUserPublisher _publisher;
 
-    public CreateUserHandler(ILogger<CreateUserHandler> logger)
+    public CreateUserHandler(IMapper mapper, CreateUserPublisher publisher)
     {
-        _logger = logger;
+        _mapper = mapper;
+        _publisher = publisher;
     }
     
-    public Task<CreateUserResponse> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var externalCommand = _mapper.Map<CreateUserExternalCommand>(request); // hmm
+        
+        await _publisher.Publish(externalCommand, cancellationToken);
     }
 }
