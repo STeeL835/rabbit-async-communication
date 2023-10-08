@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4AA9B3
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Consumer.App", "src\Test.Rabbit.Consumer.App\Test.Rabbit.Consumer.App.csproj", "{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,9 +36,14 @@ Global
 		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDB0BE7-C402-427C-944D-4E31A4392FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC} = {95A71924-C977-4C1A-85A8-2628842432A7}
 		{3BDB0BE7-C402-427C-944D-4E31A4392FEA} = {95A71924-C977-4C1A-85A8-2628842432A7}
+		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC} = {95A71924-C977-4C1A-85A8-2628842432A7}
 	EndGlobalSection
 EndGlobal
