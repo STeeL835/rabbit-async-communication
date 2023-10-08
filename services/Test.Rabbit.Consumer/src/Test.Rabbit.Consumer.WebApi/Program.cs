@@ -18,6 +18,8 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     services.AddSwaggerGen();
 
     services.AddAppDatabase(configuration);
+    services.AddAppMediatr();
+    services.AddAppAutomapper();
 }
 
 void ConfigureApplication(WebApplication webApplication)

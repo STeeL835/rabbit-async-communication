@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Test.Rabbit.Consumer.Database\Test.Rabbit.Consumer.Database.csproj" />
+    <ProjectReference Include="..\Test.Rabbit.Consumer.App\Test.Rabbit.Consumer.App.csproj" />
   </ItemGroup>
 
 </Project>
