@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4AA9B3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Consumer.App", "src\Test.Rabbit.Consumer.App\Test.Rabbit.Consumer.App.csproj", "{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Consumer.Domain", "src\Test.Rabbit.Consumer.Domain\Test.Rabbit.Consumer.Domain.csproj", "{11CB6476-7E87-4982-9A20-A42CB79D3910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,10 +42,15 @@ Global
 		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CB6476-7E87-4982-9A20-A42CB79D3910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CB6476-7E87-4982-9A20-A42CB79D3910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CB6476-7E87-4982-9A20-A42CB79D3910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CB6476-7E87-4982-9A20-A42CB79D3910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CDD90687-0CE0-4A24-BC9C-73FF3229E6FC} = {95A71924-C977-4C1A-85A8-2628842432A7}
 		{3BDB0BE7-C402-427C-944D-4E31A4392FEA} = {95A71924-C977-4C1A-85A8-2628842432A7}
 		{D6D8605E-D6ED-4274-B2BC-8BC344504FFC} = {95A71924-C977-4C1A-85A8-2628842432A7}
+		{11CB6476-7E87-4982-9A20-A42CB79D3910} = {95A71924-C977-4C1A-85A8-2628842432A7}
 	EndGlobalSection
 EndGlobal
