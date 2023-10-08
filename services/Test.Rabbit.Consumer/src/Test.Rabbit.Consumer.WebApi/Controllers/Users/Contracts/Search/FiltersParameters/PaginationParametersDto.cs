@@ -1,4 +1,4 @@
-namespace Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search.Filters;
+namespace Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search.FiltersParameters;
 
 public class PaginationParametersDto
 {

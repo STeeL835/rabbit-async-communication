@@ -9,7 +9,7 @@ public static class MediatrConfigurationExtensions
     {
         return services.AddMediatR(cfg =>
         {
-            cfg.RegisterServicesFromAssembly(AppAssembly.Instance);
+            cfg.RegisterServicesFromAssembly(AppAssembly.Instance); // TODO: Should this be in App assembly or here's okay?
             cfg.AddOpenBehavior(typeof(ValidatorBehavior<,>));
         });
     }

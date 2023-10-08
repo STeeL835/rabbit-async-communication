@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Test.Rabbit.Consumer.App.Organizations.AttachUsers.Contracts;
 
 namespace Test.Rabbit.Consumer.App.Organizations.AttachUsers;
 

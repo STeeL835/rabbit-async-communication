@@ -1,4 +1,4 @@
-﻿using Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search.Filters;
+﻿using Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search.FiltersParameters;
 
 namespace Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search;
 
