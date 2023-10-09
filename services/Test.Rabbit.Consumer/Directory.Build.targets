@@ -1,0 +1,9 @@
+<Project>
+
+    <ItemGroup>
+        <Compile Update="**/*MappingProfile.cs">
+            <DependentUpon>$([System.Text.RegularExpressions.Regex]::Replace('%(Filename)', 'MappingProfile', '.cs'))</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>
