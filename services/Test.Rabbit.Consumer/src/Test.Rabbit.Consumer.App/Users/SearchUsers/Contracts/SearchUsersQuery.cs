@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Test.Rabbit.Consumer.App.Contracts;
 
 namespace Test.Rabbit.Consumer.App.Users.SearchUsers.Contracts;
 
