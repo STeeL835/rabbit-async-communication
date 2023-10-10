@@ -1,4 +1,4 @@
-namespace Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search;
+namespace Test.Rabbit.Consumer.WebApi.Controllers.Contracts.Entities.Users;
 
 public sealed class UserDto
 {
