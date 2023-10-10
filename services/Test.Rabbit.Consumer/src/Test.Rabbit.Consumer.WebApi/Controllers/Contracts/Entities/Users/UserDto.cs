@@ -1,6 +1,6 @@
 namespace Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search;
 
-public class UserDto
+public sealed class UserDto
 {
     public Guid Id { get; init; }
     public Guid? OrganizationId { get; init; }
