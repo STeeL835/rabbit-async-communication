@@ -1,7 +1,6 @@
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Test.Rabbit.Consumer.App.Users.SearchUsers.Contracts;
 using Test.Rabbit.Consumer.WebApi.Controllers.Contracts.Entities.Users;
 using Test.Rabbit.Consumer.WebApi.Controllers.Users.Contracts.Search;
 

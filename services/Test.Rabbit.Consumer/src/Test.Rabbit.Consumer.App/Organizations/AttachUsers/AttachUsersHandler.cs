@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Test.Rabbit.Consumer.App.Organizations.AttachUsers.Contracts;
 using Test.Rabbit.Consumer.Database;

@@ -6,6 +6,6 @@ public class CreateUserCommandMappingProfile : AutoMapper.Profile
 {
     public CreateUserCommandMappingProfile()
     {
-        CreateMap<CreateUserExternalCommand, CreateUserCommand>();
+        CreateMap<CreateUserExternalCommand, CreateUserCommandDto>();
     }
 }

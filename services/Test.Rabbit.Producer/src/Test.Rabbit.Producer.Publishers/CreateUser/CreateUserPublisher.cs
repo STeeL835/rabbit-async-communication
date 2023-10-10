@@ -21,7 +21,7 @@ public class CreateUserPublisher
 
     public async Task Publish(CreateUserExternalCommand command, CancellationToken ct)
     {
-        var message = _mapper.Map<CreateUserCommand>(command);
+        var message = _mapper.Map<CreateUserCommandDto>(command);
         
         await _bus.Publish(message, ct); // TODO: make a formatter that doesn't make a topic-queue name from an entity name?
         

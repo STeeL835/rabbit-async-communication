@@ -2,7 +2,6 @@
 using MediatR;
 using Test.Rabbit.Consumer.App.Users.AddUser.Contracts;
 using Test.Rabbit.Consumer.Database;
-using Test.Rabbit.Consumer.Database.Models.Users;
 
 namespace Test.Rabbit.Consumer.App.Users.AddUser;
 
