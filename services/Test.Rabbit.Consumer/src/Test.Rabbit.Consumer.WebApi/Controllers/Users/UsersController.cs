@@ -22,11 +22,11 @@ public class UsersController : ControllerBase
     [HttpPost]
     public async Task<IEnumerable<UserDto>> Search(SearchUserFiltersDto filters)
     {
-        var query = _mapper.Map<SearchUsersQuery>(filters);
+        var query = filters.ToRequest(_mapper);
 
         var response = await _mediator.Send(query);
 
-        var users = _mapper.Map<List<UserDto>>(response.Users);
+        var users = response.Users.ToDtos(_mapper);
 
         return users;
     }

@@ -20,10 +20,7 @@ public class AddUserHandler : IRequestHandler<AddUserCommand>
     public async Task Handle(AddUserCommand request, CancellationToken cancellationToken)
     {
         // TODO: extension method to map with additional properties
-        var userDb = _mapper.Map<User>(request, opt =>
-        {
-            opt.BeforeMap((src, dest) => dest.Id = Guid.NewGuid());
-        });
+        var userDb = request.ToUser(id: Guid.NewGuid(), _mapper);
 
         _dataContext.Users.Add(userDb);
 
