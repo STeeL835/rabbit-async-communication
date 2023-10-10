@@ -20,6 +20,7 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     services.AddAppDatabase(configuration);
     services.AddAppMediatr();
     services.AddAppAutomapper();
+    services.AddAppMassTransit();
 }
 
 void ConfigureApplication(WebApplication webApplication)
