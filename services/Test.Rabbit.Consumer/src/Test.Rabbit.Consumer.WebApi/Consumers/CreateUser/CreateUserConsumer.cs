@@ -3,7 +3,7 @@ using MassTransit;
 using MediatR;
 using Test.Rabbit.Consumer.WebApi.Consumers.CreateUser.Contracts;
 
-namespace Test.Rabbit.Consumer.WebApi.Consumers;
+namespace Test.Rabbit.Consumer.WebApi.Consumers.CreateUser;
 
 public sealed class CreateUserConsumer : IConsumer<CreateUserCommandDto>
 {

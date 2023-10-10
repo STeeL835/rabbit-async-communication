@@ -1,6 +1,6 @@
 using MassTransit;
 
-namespace Test.Rabbit.Consumer.WebApi.Consumers;
+namespace Test.Rabbit.Consumer.WebApi.Consumers.CreateUser;
 
 public class CreateUserConsumerDefinition : ConsumerDefinition<CreateUserConsumer>
 {
