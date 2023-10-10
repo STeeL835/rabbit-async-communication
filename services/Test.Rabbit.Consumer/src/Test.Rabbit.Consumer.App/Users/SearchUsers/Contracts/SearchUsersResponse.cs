@@ -1,4 +1,4 @@
-﻿using Test.Rabbit.Consumer.Domain.Users;
+﻿using Test.Rabbit.Consumer.Database.Models.Users;
 
 namespace Test.Rabbit.Consumer.App.Users.SearchUsers.Contracts;
 
