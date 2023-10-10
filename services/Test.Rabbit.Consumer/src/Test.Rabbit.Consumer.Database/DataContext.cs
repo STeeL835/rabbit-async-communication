@@ -8,8 +8,8 @@ public sealed class DataContext : DbContext
 {
     public DataContext(DbContextOptions options) : base(options) { }
     
-    public DbSet<UserDb> Users => Set<UserDb>();
-    public DbSet<OrganizationDb> Organizations => Set<OrganizationDb>();
+    public DbSet<User> Users => Set<User>();
+    public DbSet<Organization> Organizations => Set<Organization>();
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

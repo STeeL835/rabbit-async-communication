@@ -2,7 +2,7 @@
 
 namespace Test.Rabbit.Consumer.Database.Models.Organizations;
 
-public sealed class OrganizationDb
+public sealed class Organization
 {
     public required Guid Id { get; set; }
     public required string Name { get; set; }
