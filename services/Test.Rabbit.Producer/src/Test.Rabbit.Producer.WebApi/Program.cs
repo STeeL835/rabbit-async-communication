@@ -1,20 +1,29 @@
-using System.Reflection;
-using FluentValidation;
-using Test.Rabbit.Producer.App;
 using Test.Rabbit.Producer.Publishers;
 using Test.Rabbit.Producer.WebApi.Configuration;
-using Test.Rabbit.Producer.WebApi.Features.Mediatr.Behaviors;
 using Test.Rabbit.Producer.WebApi.Features.Validation;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-ConfigureServices(builder.Services);
+var logger = builder.GetLogger<Program>();
 
-var app = builder.Build();
+try
+{
+    builder.Host.UseAppSerilog();
+    
+    ConfigureServices(builder.Services);
 
-ConfigureApplication(app);
+    var app = builder.Build();
 
-app.Run();
+    ConfigureApplication(app);
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    logger.LogCritical(ex, "Host terminated unexpectedly");
+    throw;
+}
 
 
 void ConfigureServices(IServiceCollection services)
