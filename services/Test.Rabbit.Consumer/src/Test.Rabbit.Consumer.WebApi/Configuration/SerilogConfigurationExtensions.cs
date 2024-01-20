@@ -2,7 +2,7 @@
 using Serilog.Sinks.SystemConsole.Themes;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
-namespace Test.Rabbit.Producer.WebApi.Configuration;
+namespace Test.Rabbit.Consumer.WebApi.Configuration;
 
 public static class SerilogConfigurationExtensions
 {

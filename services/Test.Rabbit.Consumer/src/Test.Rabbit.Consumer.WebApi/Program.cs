@@ -1,14 +1,27 @@
 using Test.Rabbit.Consumer.WebApi.Configuration;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
-ConfigureServices(builder.Services, builder.Configuration);
+var logger = builder.GetLogger<Program>();
 
-var app = builder.Build();
+try
+{
+    builder.Host.UseAppSerilog();
+    
+    ConfigureServices(builder.Services, builder.Configuration);
 
-ConfigureApplication(app);
+    var app = builder.Build();
 
-app.Run();
+    ConfigureApplication(app);
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    logger.LogCritical(ex, "Host terminated unexpectedly");
+    throw;
+}
 
 
 void ConfigureServices(IServiceCollection services, IConfiguration configuration)
