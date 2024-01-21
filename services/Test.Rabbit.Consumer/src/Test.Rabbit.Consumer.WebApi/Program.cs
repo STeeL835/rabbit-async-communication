@@ -33,7 +33,7 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     services.AddAppDatabase(configuration);
     services.AddAppMediatr();
     services.AddAppAutomapper();
-    services.AddAppMassTransit();
+    services.AddAppRabbitMq();
 }
 
 void ConfigureApplication(WebApplication webApplication)

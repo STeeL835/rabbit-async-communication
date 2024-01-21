@@ -1,4 +1,5 @@
-namespace Test.Rabbit.Consumer.WebApi.Consumers.CreateUser.Contracts;
+// ReSharper disable once CheckNamespace - MassTransit is blind otherwise
+namespace Test.Rabbit.Producer.Publishers.CreateUser.TransitContracts;
 
 public sealed class CreateUserCommandDto
 {

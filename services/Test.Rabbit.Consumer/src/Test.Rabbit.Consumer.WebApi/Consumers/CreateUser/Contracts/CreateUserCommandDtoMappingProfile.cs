@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Test.Rabbit.Consumer.App.Users.AddUser.Contracts;
+using Test.Rabbit.Producer.Publishers.CreateUser.TransitContracts;
 
 namespace Test.Rabbit.Consumer.WebApi.Consumers.CreateUser.Contracts;
 

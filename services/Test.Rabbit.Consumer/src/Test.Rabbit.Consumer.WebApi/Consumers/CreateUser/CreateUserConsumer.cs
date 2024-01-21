@@ -2,6 +2,7 @@ using AutoMapper;
 using MassTransit;
 using MediatR;
 using Test.Rabbit.Consumer.WebApi.Consumers.CreateUser.Contracts;
+using Test.Rabbit.Producer.Publishers.CreateUser.TransitContracts;
 
 namespace Test.Rabbit.Consumer.WebApi.Consumers.CreateUser;
 

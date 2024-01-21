@@ -3,14 +3,14 @@ using MassTransit;
 
 namespace Test.Rabbit.Consumer.WebApi.Configuration;
 
-public static class MassTransitConfigurationExtensions
+public static class RabbitMqConfigurationExtensions
 {
-    public static IServiceCollection AddAppMassTransit(this IServiceCollection services)
+    public static IServiceCollection AddAppRabbitMq(this IServiceCollection services)
     {
         return services.AddMassTransit(x =>
         {
-            x.AddConsumers(Assembly.GetCallingAssembly());
-
+            x.AddConsumers(Assembly.GetAssembly(typeof(Program)));
+            
             x.UsingRabbitMq((context, cfg) =>
             {
                 // TODO: move to configuration
