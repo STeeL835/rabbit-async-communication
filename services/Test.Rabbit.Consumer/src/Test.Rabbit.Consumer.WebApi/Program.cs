@@ -7,6 +7,8 @@ var logger = builder.GetLogger<Program>();
 
 try
 {
+    builder.AddLocalAndPersonalAppSettings();
+    
     builder.Host.UseAppSerilog();
     
     ConfigureServices(builder.Services, builder.Configuration);
