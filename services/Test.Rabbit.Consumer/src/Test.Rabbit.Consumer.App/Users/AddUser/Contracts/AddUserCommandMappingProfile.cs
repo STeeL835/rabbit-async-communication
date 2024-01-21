@@ -19,7 +19,7 @@ public static class AddUserCommandMappingProfileExtensions
     {
         return mapper.Map<User>(command, opt =>
         {
-            opt.BeforeMap((_, dest) => dest.Id = id);
+            opt.AfterMap((_, dest) => dest.Id = id);
         });
     }
 }

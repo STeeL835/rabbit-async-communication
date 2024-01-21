@@ -34,6 +34,7 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     services.AddAppMediatr();
     services.AddAppAutomapper();
     services.AddAppRabbitMq();
+    services.AddAppValidators();
 }
 
 void ConfigureApplication(WebApplication webApplication)

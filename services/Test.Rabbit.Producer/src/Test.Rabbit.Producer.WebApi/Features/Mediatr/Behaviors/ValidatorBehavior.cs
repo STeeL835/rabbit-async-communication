@@ -3,20 +3,23 @@ using MediatR;
 
 namespace Test.Rabbit.Producer.WebApi.Features.Mediatr.Behaviors;
 
-// TODO: move to separate Features assembly? 
 public class ValidatorBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {
-    private readonly IValidator<TRequest> _validator;
+    // can be many, can be none
+    private readonly IEnumerable<IValidator<TRequest>> _validators;
 
-    public ValidatorBehavior(IValidator<TRequest> validator)
+    public ValidatorBehavior(IEnumerable<IValidator<TRequest>> validators)
     {
-        _validator = validator;
+        _validators = validators;
     }
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        await _validator.ValidateAndThrowAsync(request, cancellationToken);
+        foreach (var validator in _validators)
+        {
+            await validator.ValidateAndThrowAsync(request, cancellationToken);
+        }
 
         var response = await next();
 
