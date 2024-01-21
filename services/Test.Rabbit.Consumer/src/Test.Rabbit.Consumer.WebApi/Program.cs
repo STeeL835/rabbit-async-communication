@@ -13,7 +13,7 @@ try
 
     var app = builder.Build();
 
-    ConfigureApplication(app);
+    await ConfigureApplication(app);
 
     app.Run();
 }
@@ -37,17 +37,19 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     services.AddAppValidators();
 }
 
-void ConfigureApplication(WebApplication webApplication)
+async Task ConfigureApplication(WebApplication app)
 {
-    if (webApplication.Environment.IsDevelopment())
+    if (app.Environment.IsDevelopment())
     {
-        webApplication.UseSwagger();
-        webApplication.UseSwaggerUI();
+        app.UseSwagger();
+        app.UseSwaggerUI();
     }
 
-    webApplication.UseHttpsRedirection();
+    app.UseHttpsRedirection();
 
-    webApplication.UseAuthorization();
+    app.UseAuthorization();
 
-    webApplication.MapControllers();
+    app.MapControllers();
+    
+    await app.MigrateDb<Program>();
 }

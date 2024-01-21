@@ -11,4 +11,23 @@ public static class DatabaseConfigurationExtensions
             options.UseNpgsql(configuration.GetConnectionString("Default")));
 
     }
+
+    public static async Task<WebApplication> MigrateDb<TLogger>(this WebApplication app)
+    {
+        using var serviceScope = app.Services.CreateScope();
+        
+        await using var ctx = serviceScope.ServiceProvider.GetRequiredService<DataContext>();
+        var logger = serviceScope.ServiceProvider.GetRequiredService<ILogger<TLogger>>();
+
+        var pendingMigrations = (await ctx.Database.GetPendingMigrationsAsync()).ToList();
+
+        if (pendingMigrations.Count > 0)
+        {
+            logger.LogInformation("Applying pending database migrations");
+            
+            await ctx.Database.MigrateAsync();
+        }
+
+        return app;
+    }
 }
