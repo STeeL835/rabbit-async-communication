@@ -1,6 +1,10 @@
 <Project>
-
+    
     <ItemGroup>
+        <Content Update="**/appsettings.*.json">
+            <DependentUpon>$([System.Text.RegularExpressions.Regex]::Replace('%(Filename)', '\.[^\.]+$', '.json'))</DependentUpon>
+        </Content>
+        
         <Compile Update="**/*MappingProfile.cs">
             <DependentUpon>$([System.Text.RegularExpressions.Regex]::Replace('%(Filename)', 'MappingProfile', '.cs'))</DependentUpon>
         </Compile>

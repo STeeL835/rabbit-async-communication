@@ -1,6 +1,4 @@
-using System.Text.RegularExpressions;
-
-namespace Test.Rabbit.Consumer.WebApi.Configuration;
+namespace Test.Rabbit.Producer.WebApi.Configuration;
 
 public static class AppConfigurationExtensions
 {
@@ -9,6 +7,7 @@ public static class AppConfigurationExtensions
         var environmentName = hostBuilder.Environment.EnvironmentName;
         var username = Environment.UserName;
 
+        // TODO: name for local appsettings, but for everyone in repo AND invisible for app running in cloud
         hostBuilder.Configuration.AddJsonFile($"appsettings.{username}.json", optional: true, reloadOnChange: true);
         hostBuilder.Configuration.AddJsonFile($"appsettings.{environmentName}.{username}.json", optional: true, reloadOnChange: true);
         
