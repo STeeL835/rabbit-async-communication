@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Producer.App", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Producer.Publishers", "src\Test.Rabbit.Producer.Publishers\Test.Rabbit.Producer.Publishers.csproj", "{AC8B326F-FF7D-49FF-838F-1A582D10ED50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Rabbit.Producer.IntegrationTests", "test\Test.Rabbit.Producer.IntegrationTests\Test.Rabbit.Producer.IntegrationTests.csproj", "{40FB0185-66FE-4908-A1C6-4E2236532742}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A251C48B-909D-4D9F-9D4B-BE9B5DE22CB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,10 @@ Global
 		{AC8B326F-FF7D-49FF-838F-1A582D10ED50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC8B326F-FF7D-49FF-838F-1A582D10ED50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC8B326F-FF7D-49FF-838F-1A582D10ED50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FB0185-66FE-4908-A1C6-4E2236532742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FB0185-66FE-4908-A1C6-4E2236532742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FB0185-66FE-4908-A1C6-4E2236532742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FB0185-66FE-4908-A1C6-4E2236532742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{ED0F71F5-62AA-4C47-98AE-CD4796E0A3AB} = {B5779FA5-1A6E-43F6-97F5-8E0F6C22BB9D}
 		{A159D3CE-0DAB-4109-86BB-75940A8F4B2D} = {B5779FA5-1A6E-43F6-97F5-8E0F6C22BB9D}
 		{AC8B326F-FF7D-49FF-838F-1A582D10ED50} = {B5779FA5-1A6E-43F6-97F5-8E0F6C22BB9D}
+		{40FB0185-66FE-4908-A1C6-4E2236532742} = {A251C48B-909D-4D9F-9D4B-BE9B5DE22CB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C32D15F-871D-4ACE-8BB7-B37AFC22FFB5}
