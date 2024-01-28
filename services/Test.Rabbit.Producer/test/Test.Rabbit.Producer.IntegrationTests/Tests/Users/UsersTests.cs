@@ -1,3 +1,4 @@
+using System.Net;
 using FluentAssertions;
 using Test.Rabbit.Producer.IntegrationTests.Prerequisites;
 using Test.Rabbit.Producer.Publishers.CreateUser.TransitContracts;
@@ -32,5 +33,23 @@ public class UsersTests : IClassFixture<TestFixture>
         publishedMessages.Should().HaveCount(1);
 
         publishedMessages[0].MessageObject.Should().BeEquivalentTo(createUserDto); // as long as they are the same structure
+    }
+    
+    [Fact]
+    public async Task CreateUser_EmptyMiddleName_ShouldReturnBadRequest()
+    {
+        var createUserDto = new CreateUserDto
+        {
+            FirstName = "John",
+            LastName = "",
+            EmailAddress = "johndoe@example.com",
+            PhoneNumber = "+12345678900"
+        };
+
+        var response = await Fixture.Controllers.Users.CreateUserRaw(createUserDto);
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+
+        var publishedMessages = Fixture.TestHarness.Published.Select<CreateUserCommandDto>().ToList();
+        publishedMessages.Should().BeEmpty();
     }
 }

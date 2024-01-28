@@ -10,7 +10,7 @@ public class TestFixture
     
     public ExternalServiceMocks ExternalServices { get; }
     public ControllerClients Controllers { get; }
-    public ITestHarness TestHarness { get; }
+    public ITestHarness TestHarness { get; } // TODO: reset harness for each test
     
     
     public TestFixture()

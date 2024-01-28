@@ -4,7 +4,7 @@ using MediatR;
 namespace Test.Rabbit.Producer.WebApi.Features.Mediatr.Behaviors;
 
 public class ValidatorBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IRequest<TResponse>
+    where TRequest : notnull
 {
     // can be many, can be none
     private readonly IEnumerable<IValidator<TRequest>> _validators;
