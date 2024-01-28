@@ -1,0 +1,36 @@
+using FluentAssertions;
+using Test.Rabbit.Producer.IntegrationTests.Prerequisites;
+using Test.Rabbit.Producer.Publishers.CreateUser.TransitContracts;
+using Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts.CreateUser;
+
+namespace Test.Rabbit.Producer.IntegrationTests.Tests.Users;
+
+public class UsersTests : IClassFixture<TestFixture>
+{
+    public TestFixture Fixture { get; }
+
+    public UsersTests(TestFixture fixture)
+    {
+        Fixture = fixture;
+    }
+    
+    [Fact]
+    public async Task CreateUser_ValidUser_ShouldSendUserToQueue()
+    {
+        var createUserDto = new CreateUserDto
+        {
+            FirstName = "John",
+            LastName = "Doe",
+            EmailAddress = "johndoe@example.com",
+            PhoneNumber = "+12345678900"
+        };
+
+        var response = await Fixture.Controllers.Users.CreateUserRaw(createUserDto);
+        response.Should().BeSuccessful();
+
+        var publishedMessages = Fixture.TestHarness.Published.Select<CreateUserCommandDto>().ToList();
+        publishedMessages.Should().HaveCount(1);
+
+        publishedMessages[0].MessageObject.Should().BeEquivalentTo(createUserDto); // as long as they are the same structure
+    }
+}

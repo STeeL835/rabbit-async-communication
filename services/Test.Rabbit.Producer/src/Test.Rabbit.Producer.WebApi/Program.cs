@@ -54,3 +54,5 @@ void ConfigureApplication(WebApplication application)
     application.UseAuthorization();
     application.MapControllers();
 }
+
+public partial class Program { } // xunit needs public (TODO: search for workaround)

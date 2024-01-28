@@ -1,9 +1,9 @@
 ﻿using System.Net.Http.Json;
 using Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts.CreateUser;
 
-namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites;
+namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients.Aggregates;
 
-internal class UsersClient(HttpClient client)
+public class UsersClient(HttpClient client)
 {
     public async Task<HttpResponseMessage> CreateUserRaw(CreateUserDto createUser)
     {

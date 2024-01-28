@@ -1,6 +1,6 @@
-﻿namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites;
+﻿namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Mocks;
 
-internal class ExternalServiceMocks
+public class ExternalServiceMocks
 {
     
 }

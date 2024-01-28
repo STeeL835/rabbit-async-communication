@@ -1,6 +1,8 @@
-﻿namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites;
+﻿using Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients.Aggregates;
 
-internal class ControllerClients(HttpClient client)
+namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients;
+
+public class ControllerClients(HttpClient client)
 {
-    public UsersClient Users => new UsersClient(client);
+    public UsersClient Users => new (client);
 }

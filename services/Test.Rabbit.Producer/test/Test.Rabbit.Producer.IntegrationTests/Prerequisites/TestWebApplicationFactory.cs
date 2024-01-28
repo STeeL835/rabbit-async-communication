@@ -23,10 +23,10 @@ public class TestWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEnt
 
         // TODO: Add configuration like this here and in consumer
         configurationBuilder
-            .AddJsonFile($"appsettings.Testing.json", optional: false)
-            .AddJsonFile($"appsettings.Testing.local.json")
-            .AddJsonFile($"appsettings.Testing.{userName}.json")
-            .AddJsonFile($"appsettings.Testing.{userName}.local.json");
+            .AddJsonFile($"appsettings.Testing.json")
+            .AddJsonFile($"appsettings.Testing.local.json", optional: true)
+            .AddJsonFile($"appsettings.Testing.{userName}.json", optional: true)
+            .AddJsonFile($"appsettings.Testing.{userName}.local.json", optional: true);
     }
 
     private void ConfigureServices(IServiceCollection services)
