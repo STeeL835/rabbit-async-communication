@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Test.Rabbit.Producer.IntegrationTests.Prerequisites.Tests;
 
 namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites;
 
 public class TestWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> where TEntryPoint : class
 {
-    // TODO: replace logger with ITestOutputHelper
+    public ReloadableLoggerFactory ReloadableLoggerFactory { get; } = new();
     
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -21,7 +23,6 @@ public class TestWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEnt
     {
         var userName = Environment.UserName;
 
-        // TODO: Add configuration like this here and in consumer
         configurationBuilder
             .AddJsonFile($"appsettings.Testing.json")
             .AddJsonFile($"appsettings.Testing.local.json", optional: true)
@@ -32,5 +33,7 @@ public class TestWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEnt
     private void ConfigureServices(IServiceCollection services)
     {
         services.AddMassTransitTestHarness();
+        
+        services.AddSingleton<ILoggerFactory>(ReloadableLoggerFactory);
     }
 }

@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Divergic.Logging.Xunit" />
         <PackageReference Include="FluentAssertions" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0"/>
