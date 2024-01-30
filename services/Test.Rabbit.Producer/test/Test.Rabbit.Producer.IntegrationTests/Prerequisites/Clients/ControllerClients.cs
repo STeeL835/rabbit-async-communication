@@ -1,4 +1,4 @@
-﻿using Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients.Aggregates;
+﻿using Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients.Implementations;
 
 namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients;
 

@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Json;
 using Test.Rabbit.Producer.WebApi.Controllers.Users.Contracts.CreateUser;
 
-namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients.Aggregates;
+namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Clients.Implementations;
 
 public class UsersClient(HttpClient client)
 {
