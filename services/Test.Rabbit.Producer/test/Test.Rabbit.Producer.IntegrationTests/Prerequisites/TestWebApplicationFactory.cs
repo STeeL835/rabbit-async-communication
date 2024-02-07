@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Test.Rabbit.Producer.IntegrationTests.Prerequisites.Tests;
+using Test.Rabbit.Producer.IntegrationTests.Prerequisites.Logging;
 
 namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites;
 

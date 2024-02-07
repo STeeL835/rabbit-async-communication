@@ -1,7 +1,7 @@
 ﻿using Divergic.Logging.Xunit;
 using Microsoft.Extensions.Logging;
 
-namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Tests;
+namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Logging;
 
 public class TestLogFormatter : ILogFormatter
 {

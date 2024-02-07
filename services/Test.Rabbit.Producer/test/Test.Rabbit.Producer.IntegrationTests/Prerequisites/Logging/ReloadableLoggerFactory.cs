@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Tests;
+namespace Test.Rabbit.Producer.IntegrationTests.Prerequisites.Logging;
 
 public class ReloadableLoggerFactory : ILoggerFactory
 {
